@@ -19,24 +19,24 @@ from telethon.tl.types import InputStickerSetID
 from telethon.tl.types import DocumentAttributeSticker
 
 KANGING_STR = [
-    "Eh... Koq bagus... aku kang ahhh :3",
-    "Aku kang y kakak :)",
-    "Using Witchery to kang this sticker...",
-    "Plagiarising hehe...",
-    "Inviting this sticker over to my pack...",
-    "Great\nKanging this sticker hahahahaha...",
-    "Hey that's a nice sticker!\nMind if I kang?!..",
-    "hehe me stel ur stikér\nhehe.",
-    "Ay look over there (☉｡☉)!→\nWhile I kang this...",
-    "Roses are red\nviolets are blue\nkanging this sticker\nso my pack looks cool",
-    "Imprisoning this sticker...\nit'll look good in my pack",
-    "I'm is stealing this sticker...\nhehehehehe... ",
-	"May i kang this?\nI'll do it anyway even you says no!",
-	"Seems gud if i kang this...",
+    "Eh... Koq bagus... aku curry ahhh :3",
+    "Aku curry ya kakak :)",
+    "Curry Sticker dulu yee kan",
+    "ehh, mantep nih.....aku ambil ya qaqa",
+    "Bagus eaaaa....\nAmbil ahh....",
+    "Ini Sticker aku ambil yaa\nDUARR!",
+    "leh ugha ni Sticker\nCurry ahh~",
+    "Pim Pim Pom!!!\nni Sticker punya aing sekarang hehe",
+    "Bentar boss, ane curry dulu",
+    "Ihh, bagus nih\nCurry ahh~",
+    "Curry lagi yee kan.....",
+    "CURRY TROSS!!!",
+	"Bolehkah saya curry ni sticker\nau ah curry aja hehe",
+	"Curry Sticker ahh.....",
 ]
 
 
-@register(outgoing=True, pattern="^.kang")
+@register(outgoing=True, pattern="^.curry")
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
@@ -240,8 +240,8 @@ async def kang(args):
                 # Ensure user doesn't get spamming notifications
                 await bot.send_read_acknowledge(conv.chat_id)
 
-        await args.edit(f"`Kanged successfully!`\
-            \n[Click here](t.me/addstickers/{packname}) to see my pack",
+        await args.edit(f"`Asyique Sukses!`\
+            \n[Klik Disini](t.me/addstickers/{packname}) kalo mau liat hasil curryan",
                         parse_mode='md')
 
 
@@ -315,13 +315,13 @@ async def get_pack_info(event):
 
 CMD_HELP.update({
     "stickers":
-    ".kang\
-\nUsage: Reply .kang to a sticker or an image to kang it to your userbot pack.\
-\n\n.kang [emoji('s)]\
+    ".curry\
+\nUsage: Reply .curry to a sticker or an image to kang it to your userbot pack.\
+\n\n.curry [emoji('s)]\
 \nUsage: Works just like .kang but uses the emoji('s) you picked.\
-\n\n.kang [number]\
+\n\n.curry [number]\
 \nUsage: Kang's the sticker/image to the specified pack but uses 🤔 as emoji.\
-\n\n.kang [emoji('s)] [number]\
+\n\n.curry [emoji('s)] [number]\
 \nUsage: Kang's the sticker/image to the specified pack and uses the emoji('s) you picked.\
 \n\n.stkrinfo\
 \nUsage: Gets info about the sticker pack."
