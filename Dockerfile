@@ -80,7 +80,7 @@ COPY ./sample_config.env ./userbot.session* ./config.env* /root/userbot/
 RUN pip3 install -r requirements.txt
 
 CMD ["python3","-m","userbot"]
-=======
+
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 CMD ["python3","-m","userbot"]
 >>>>>>> 818038b1207c41b58d6ca1abb83e0f8eb5a0dc1e
