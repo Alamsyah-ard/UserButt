@@ -43,8 +43,8 @@ from userbot.modules.upload_download import progress, humanbytes, time_formatter
 from userbot.google_images_download import googleimagesdownload
 
 CARBONLANG = "auto"
-TTS_LANG = "en"
-TRT_LANG = "en"
+TTS_LANG = "id"
+TRT_LANG = "id"
 TEMP_DOWNLOAD_DIRECTORY = "/root/userbot/.bin"
 
 
