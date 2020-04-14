@@ -52,7 +52,7 @@ afk_time = None
 afk_start = {}
 
 # =================================================================
-@register(outgoing=True, pattern="^.afk(?: |$)(.*)", disable_errors=True)
+@register(outgoing=True, pattern="^.off(?: |$)(.*)", disable_errors=True)
 async def set_afk(afk_e):
     """ For .afk command, allows you to inform people that you are afk when they message you """
     message = afk_e.text
@@ -261,7 +261,7 @@ async def afk_on_pm(sender):
 
 CMD_HELP.update({
     "afk":
-    ".afk [Optional Reason]\
+    ".off [Optional Reason]\
 \nUsage: Sets you as afk.\nReplies to anyone who tags/PM's \
 you telling them that you are AFK(reason).\n\nSwitches off AFK when you type back anything, anywhere.\
 "
