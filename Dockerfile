@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # We're using Alpine Edge
 FROM alpine:edge
 
@@ -80,7 +79,7 @@ COPY ./sample_config.env ./userbot.session* ./config.env* /root/userbot/
 #
 RUN pip3 install -r requirements.txt
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
-=======
+
 # We're using Alpine Edge
 FROM alpine:edge
 
@@ -163,5 +162,4 @@ COPY ./sample_config.env ./userbot.session* ./config.env* /root/userbot/
 #
 RUN pip3 install -r requirements.txt
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
->>>>>>> 253363e... Userbot: enable cryptg for faster download_media
 CMD ["python3","-m","userbot"]
