@@ -19,12 +19,9 @@ gTTS>=2.0.1
 gTTS-token>=1.1.3
 hachoir>=3.0a5
 # heroku
-<<<<<<< HEAD
 ffmpy
 heroku3>=3.4.0
-=======
 heroku3>=3.4.0	
->>>>>>> 253363e... Userbot: enable cryptg for faster download_media
 httplib2
 humanize
 lxml
