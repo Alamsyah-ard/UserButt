@@ -71,10 +71,10 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"Going Away from Keyboard!\
+        await afk_e.edit(f"Into the Void!\
         \nReason: `{string}`")
     else:
-        await afk_e.edit("Going Away from Keyboard!")
+        await afk_e.edit("Into the Void!")
     if BOTLOG:
         await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nYou went Away from Keyboard!")
     ISAFK = True
