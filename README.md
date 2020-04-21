@@ -6,7 +6,7 @@
 <p align="center"><a href="#how-to-host">How To Host</a> | <a href="#updates-and-support">Updates and Support</a> | <a href="#credits">Credits</a> | <a href="#license">License</a></p>
 <p align="center">&nbsp;</p>
 <h2 align="center">How To Host</h2>
-<h5 align="center">The easiest way to deploy this userbot! is click on this precious button below!</h5>
+<h5 align="center">The easiest way to deploy this userbot! is click on this button below!</h5>
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/keselekpermen69/userbutt/tree/sql-extended"><img src="https://www.herokucdn.com/deploy/button.svg" alt="EPh-Oo8-BUEAAzx-Xm" border="0" alt="Deploy to Heroku" /></a></p>
 <p align="center">&nbsp;</p>
 <h2 align="center">Credits</h2>
