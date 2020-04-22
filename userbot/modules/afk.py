@@ -80,9 +80,8 @@ async def set_afk(afk_e):
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
-
-
-@register(outgoing=True)
+    
+    @register(outgoing=True, pattern="^.unoff(?: |$)(.*)", disable_errors=True)
 async def type_afk_is_not_true(notafk):
     """ This sets your status as not afk automatically when you write something while being afk """
     global ISAFK
@@ -97,7 +96,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("I'm no longer Away from Keyboard.")
+        msg = await notafk.edit("**I'm back Bish!**")
         time.sleep(3)
         await msg.delete()
         if BOTLOG:
@@ -264,5 +263,8 @@ CMD_HELP.update({
     ".off [Optional Reason]\
 \nUsage: Sets you as afk.\nReplies to anyone who tags/PM's \
 you telling them that you are AFK(reason).\n\nSwitches off AFK when you type back anything, anywhere.\
+"
+    ".unoff \
+\nUsage: back from AFK\
 "
 })
