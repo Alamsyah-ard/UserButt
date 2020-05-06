@@ -168,7 +168,8 @@ async def mention_afk(mention):
                     await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
                         \nReason: `{AFKREASON}`")
                 else:
-                    await mention.reply(str(choice(AFKSTR)))
+                    await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                        \nPlease come back later")
                 USERS.update({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif mention.sender_id in USERS:
@@ -177,7 +178,8 @@ async def mention_afk(mention):
                         await mention.reply(f"**I'm still not available right now.** (Since **{afk_since}**).\
                             \nReason: `{AFKREASON}`")
                     else:
-                        await mention.reply(str(choice(AFKSTR)))
+                        await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                        \nPlease come back later")
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
@@ -244,7 +246,8 @@ async def afk_on_pm(sender):
                     await sender.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
                         \nReason: `{AFKREASON}`")
                 else:
-                    await sender.reply(str(choice(AFKSTR)))
+                    await sender.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                        \nPlease come back later")
                 USERS.update({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif apprv and sender.sender_id in USERS:
@@ -253,7 +256,8 @@ async def afk_on_pm(sender):
                         await sender.reply(f"**I'm still not available right now.** (Since **{afk_since}**).\
                             \nReason: `{AFKREASON}`")
                     else:
-                        await sender.reply(str(choice(AFKSTR)))
+                        await sender.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                        \nPlease come back later")
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
@@ -263,9 +267,9 @@ async def afk_on_pm(sender):
 
 CMD_HELP.update({
     "afk":
-    ".afk [Optional Reason]\
+    ".off [Optional Reason]\
 \nUsage: Sets you as afk.\nReplies to anyone who tags/PM's you telling them that you are AFK(reason).\
-\n\n.unafk\
+\n\n.unoff\
 \nUsage: Back from afk state\
 "
 })
